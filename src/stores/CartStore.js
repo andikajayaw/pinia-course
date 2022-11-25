@@ -7,10 +7,10 @@ export const useCartStore = defineStore("CartStore", {
         }
     },
     actions: {
-        addItems(count, product) {
+        addItems(count, item) {
             count = parseInt(count);
             for (let i = 0; i < count; i++) {
-                this.items.push(product);
+                this.items.push({ ...item });
             }
         }
     }
